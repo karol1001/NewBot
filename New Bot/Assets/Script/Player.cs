@@ -9,11 +9,13 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private UnityEngine.Vector2 _playerDirection;
     private Animator animator;
+ 
     // Start is called before the first frame update
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        
     }
     void Start()
     {
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
             animator.SetFloat("moveX", _playerDirection.x);
             animator.SetFloat("moveY", _playerDirection.y);
             animator.SetBool("isMoving", true);
+            
         }
         else
         {
